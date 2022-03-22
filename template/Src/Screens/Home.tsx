@@ -6,7 +6,7 @@ import {HomeScreenParams} from '../Types/HomeStackParams.types';
 const Home = ({navigation, route}: HomeScreenParams) => {
   return (
     <>
-      <CustomHeader paddingHorizontal={15} title="Home" />
+      <CustomHeader paddingHorizontal={15} title="Home" enableBack={false} />
       <View style={styles.mainContainer}>
         <Text>Home Screen</Text>
       </View>
