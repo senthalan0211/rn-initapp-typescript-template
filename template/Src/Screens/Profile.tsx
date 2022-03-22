@@ -1,14 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import {  ProfileScreenParams } from '../Types/MainStack.types'
+import { ProfileScreenParams } from '../Types/ProfileStackParams.types'
 
 const Profile = ({route,navigation}:ProfileScreenParams) => {
   return (
     <View style={styles.mainContainer}>
-      <Text>Profile Screen of Id {route.params.profileId}</Text>
-      <TouchableOpacity style={styles.backButton} onPress={()=>{
-        navigation.goBack()
-      }}><Text>Click here to go Back</Text></TouchableOpacity>
+      <Text>Profile Screen </Text>
     </View>
   )
 }
@@ -21,10 +18,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
       },
-      backButton:{
-        backgroundColor:'tomato',
-        paddingVertical:10,
-        paddingHorizontal:20,
-        borderRadius:10
-      }
 })

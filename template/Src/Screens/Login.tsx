@@ -1,20 +1,24 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { useDispatch } from 'react-redux';
-import { login } from '../Store/Actions/authAction';
+import {useNavigation} from '@react-navigation/native';
+import {useDispatch} from 'react-redux';
+import {login} from '../Store/Actions/authAction';
+import {textStyle} from '../Utilities/Styles';
 
 const Login = () => {
-
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <View style={styles.mainContainer}>
-      <Text>Login Screen</Text>
-      <TouchableOpacity style={styles.loginButton} onPress={()=>{
-        dispatch(login("token"))
-      }}><Text>Click here to login</Text></TouchableOpacity>
-     </View>
+      <Text style={textStyle}>Signin</Text>
+      <TouchableOpacity
+        style={styles.loginButton}
+        onPress={() => {
+          dispatch(login('token'));
+        }}>
+        <Text>Click here to login</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
@@ -26,10 +30,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  loginButton:{
-    backgroundColor:'tomato',
-    paddingVertical:10,
-    paddingHorizontal:20,
-    borderRadius:10
-  }
+  loginButton: {
+    backgroundColor: 'tomato',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 10,
+  },
 });

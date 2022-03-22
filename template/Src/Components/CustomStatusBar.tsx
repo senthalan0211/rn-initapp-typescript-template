@@ -1,20 +1,19 @@
 import React from 'react';
 import {View, StatusBar, ColorValue} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {WHITECOLOR} from '../Utilities/Colors';
-import {IS_IOS} from '../Utilities/Constants';
+import {COLORS, IS_IOS} from '../Utilities/Constants';
 
-type barStyleType = "light-content" | "dark-content" | "default"
+type barStyleType = 'light-content' | 'dark-content' | 'default';
 
 interface statusBarProps {
-  barBackgroundColor?:ColorValue | undefined,
-  barStyle?: barStyleType,
+  barBackgroundColor?: ColorValue | undefined;
+  barStyle?: barStyleType;
 }
 
 const CustomStatusBar = ({
-  barBackgroundColor = WHITECOLOR,
-  barStyle = "dark-content",
-}:statusBarProps) => {
+  barBackgroundColor = COLORS.white,
+  barStyle = 'dark-content',
+}: statusBarProps) => {
   const topInset = useSafeAreaInsets().top;
   return (
     <View

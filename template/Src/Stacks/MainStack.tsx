@@ -1,16 +1,16 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from '../Screens/Home';
 import { MainStackParams } from '../Types/MainStack.types';
-import Profile from '../Screens/Profile';
+import TabNavigation from '../Navigation/TabNavigation';
 
 const Stack = createNativeStackNavigator<MainStackParams>();
 
 const MainStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false,animation:'slide_from_right'}}>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Profile" component={Profile} />
+      {/* <Stack.Screen name="HomeStack" component={HomeStack} />
+      <Stack.Screen name="Profile" component={Profile} /> */}
+      <Stack.Screen name="TabNavigation" component={TabNavigation} />
      
     </Stack.Navigator>
   );
